@@ -33,7 +33,7 @@ mybatis-plus:
 
 # swagger配置
 swagger:
-  host: localhost
+#  host: localhost:8080/ruoyi-base
   title: base模块接口文档
   license: Powered By ruoyi
 

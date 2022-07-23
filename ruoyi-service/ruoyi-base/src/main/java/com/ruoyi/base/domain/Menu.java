@@ -49,6 +49,7 @@ public class Menu implements Serializable {
     /**
      * 路由参数
      */
+    @TableField("`query`")
     private String query;
 
     /**
@@ -74,6 +75,7 @@ public class Menu implements Serializable {
     /**
      * 菜单状态（0正常 1停用）
      */
+    @TableField("`status`")
     private String status;
 
     /**

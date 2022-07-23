@@ -1,5 +1,6 @@
 package com.ruoyi.base.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ruoyi.base.domain.Menu;
 import com.ruoyi.base.service.MenuService;
 import com.ruoyi.common.core.domain.R;
@@ -25,5 +26,12 @@ public class BaseController {
     public R<List<Menu>> list(){
         List<Menu> list = menuService.list();
         return R.ok(list);
+    }
+
+    @GetMapping("/base/page")
+    public R<Page<Menu>> page(){
+        Page<Menu> page = new Page<>(1,10);
+        menuService.page(page);
+        return R.ok(page);
     }
 }
